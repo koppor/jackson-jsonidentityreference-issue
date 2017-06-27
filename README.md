@@ -18,9 +18,15 @@ When reading a JSON string of a graph, the expectation is that the reference in 
 
 ## More reading
 
-- [Jackson deserialization on multiple types](https://stackoverflow.com/q/32766922/873282):
-  A comment suggests to use `@JsonTypeInfo(use = JsonTypeInfo.Id.CLASS, include = JsonTypeInfo.As.PROPERTY, property = "type")`.
-  This does not help in our setting, as we enlist red and green nodes separately.
 - [Jackson deserialize JsonIdentityReference (alwaysAsId = true)](https://stackoverflow.com/q/18306040/873282):
   The solution proposes a separate setter for `String`.
   In our case, this only works if `Edge` would have a link to all known nodes to establish a proper link.
+- [Jackson deserialization on multiple types](https://stackoverflow.com/q/32766922/873282):
+  A comment suggests to use `@JsonTypeInfo(use = JsonTypeInfo.Id.CLASS, include = JsonTypeInfo.As.PROPERTY, property = "type")`.
+  This does not help in our setting, as we enlist red and green nodes separately.
+- [Jackson deserialization on multiple types](https://stackoverflow.com/q/32766922/873282):
+  [The answer](https://stackoverflow.com/a/32777371/873282) Shows how to plugin custom deserializers.
+- [Jackson: referencing the same object](https://stackoverflow.com/q/37640985/873282):
+  Treating marshalling only.
+- [Jackson mapper write id instead of entire object](https://stackoverflow.com/q/28147484/873282):
+  No detailed answers existing
