@@ -30,3 +30,5 @@ When reading a JSON string of a graph, the expectation is that the reference in 
   Treating marshalling only.
 - [Jackson mapper write id instead of entire object](https://stackoverflow.com/q/28147484/873282):
   No detailed answers existing
+- [Dynamic polymorphic type handling with Jackson](https://www.dilipkumarg.com/dynamic-polymorphic-type-handling-jackson/):
+  Proposal to use [`@JSonTypeResolver`](https://fasterxml.github.io/jackson-databind/javadoc/2.4/com/fasterxml/jackson/databind/annotation/JsonTypeResolver.html).
