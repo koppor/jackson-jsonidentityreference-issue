@@ -2,6 +2,7 @@ package com.github.koppor.jsonidentityissue.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Graph {
 
@@ -25,9 +26,6 @@ public class Graph {
 
     @Override
     public int hashCode() {
-        int result = greenNodes.hashCode();
-        result = 31 * result + redNodes.hashCode();
-        result = 31 * result + edges.hashCode();
-        return result;
+        return Objects.hash(greenNodes, redNodes, edges);
     }
 }

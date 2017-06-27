@@ -1,5 +1,7 @@
 package com.github.koppor.jsonidentityissue.model;
 
+import java.util.Objects;
+
 import com.fasterxml.jackson.annotation.JsonIdentityReference;
 
 public class Edge {
@@ -24,8 +26,6 @@ public class Edge {
 
     @Override
     public int hashCode() {
-        int result = source != null ? source.hashCode() : 0;
-        result = 31 * result + (target != null ? target.hashCode() : 0);
-        return result;
+        return Objects.hash(source, target);
     }
 }

@@ -1,5 +1,7 @@
 package com.github.koppor.jsonidentityissue.model;
 
+import java.util.Objects;
+
 public class RedNode extends Node {
 
     public String redProperty = "red";
@@ -25,6 +27,6 @@ public class RedNode extends Node {
 
     @Override
     public int hashCode() {
-        return redProperty != null ? redProperty.hashCode() : 0;
+        return Objects.hash(getId(), redProperty);
     }
 }
