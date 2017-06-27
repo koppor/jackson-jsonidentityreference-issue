@@ -8,12 +8,13 @@ When executing the test cases, following output is produced:
 
 The setting:
 
-- Graph with Nodes and Edges
-- Nodes can be either red or green typed. This is done via inheritance
+- Graph with nodes and edges
+- Nodes can be either red or green typed. This is done via inheritance. In the graph, these are listed in the Graph explicitly
+- Edges connect `Node`s
 - `Node` is `abstract`, whereas `GreenNode` and `RedNode` are concrete classes
 - `RedNode` and `GreenNode` differ by their properties
 
-When reading a JSON string of a graph, the expectation is that the appropriate sub classes of `Node` are instantiated, because the properties of each sub class differ.
+When reading a JSON string of a graph, the expectation is that the reference in the each edge are appropriately instantiated.
 
 ## More reading
 

@@ -7,7 +7,7 @@ import org.junit.Test;
 
 public class GraphTest {
 
-    private final String jsonStr = "{\"nodes\":[{\"id\":\"r\",\"content\":\"red r\",\"redProperty\":\"red\"},{\"id\":\"g\",\"content\":\"green g\",\"greenProperty\":\"green\"}],\"edges\":[{\"source\":\"r\",\"target\":\"g\"}]}";
+    private final String jsonStr = "{\"greenNodes\":[{\"id\":\"g\",\"content\":\"green g\",\"greenProperty\":\"green\"}],\"redNodes\":[{\"id\":\"r\",\"content\":\"red r\",\"redProperty\":\"red\"}],\"edges\":[{\"source\":\"g\",\"target\":\"r\"}]}";
     private final ObjectMapper objectMapper = new ObjectMapper();
     private Graph g;
 
@@ -15,11 +15,11 @@ public class GraphTest {
     public void setup() {
         g = new Graph();
 
-        Node n1 = new RedNode("r");
-        g.nodes.add(n1);
+        GreenNode n1 = new GreenNode("g");
+        g.greenNodes.add(n1);
 
-        Node n2 = new GreenNode("g");
-        g.nodes.add(n2);
+        RedNode n2 = new RedNode("r");
+        g.redNodes.add(n2);
 
         Edge e = new Edge();
         e.source = n1;

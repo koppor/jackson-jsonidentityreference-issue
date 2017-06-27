@@ -4,6 +4,10 @@ public class RedNode extends Node {
 
     public String redProperty = "red";
 
+    public RedNode() {
+        super();
+    }
+
     public RedNode(String id) {
         super(id);
         this.content = "red " + id;
