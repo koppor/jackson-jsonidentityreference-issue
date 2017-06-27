@@ -16,6 +16,8 @@ The setting:
 
 When reading a JSON string of a graph, the expectation is that the reference in the each edge are appropriately instantiated.
 
+The issue has been posted as [stackoverflow question](https://stackoverflow.com/q/44789227/873282).
+
 ## More reading
 
 - [Jackson deserialize JsonIdentityReference (alwaysAsId = true)](https://stackoverflow.com/q/18306040/873282):
