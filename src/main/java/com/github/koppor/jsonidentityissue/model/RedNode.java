@@ -2,6 +2,13 @@ package com.github.koppor.jsonidentityissue.model;
 
 import java.util.Objects;
 
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
+
+@JsonTypeInfo(
+        use = JsonTypeInfo.Id.NAME,
+        include = JsonTypeInfo.As.EXISTING_PROPERTY,
+        property = "type",
+        defaultImpl=RedNode.class)
 public class RedNode extends Node {
 
     public String redProperty = "red";
@@ -13,6 +20,11 @@ public class RedNode extends Node {
     public RedNode(String id) {
         super(id);
         this.content = "red " + id;
+    }
+
+    @Override
+    public String getType() {
+        return "RedNode";
     }
 
     @Override

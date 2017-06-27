@@ -3,14 +3,16 @@ package com.github.koppor.jsonidentityissue.model;
 import java.util.Objects;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 
-//@JsonTypeInfo(
-//        use = JsonTypeInfo.Id.NAME,
-//        include = JsonTypeInfo.As.PROPERTY,
-//        property = "type")
+@JsonTypeInfo(
+        use = JsonTypeInfo.Id.NAME,
+        include = JsonTypeInfo.As.EXISTING_PROPERTY,
+        property = "type")
 @JsonSubTypes({
         @JsonSubTypes.Type(value = GreenNode.class, name = "GreenNode"),
         @JsonSubTypes.Type(value = RedNode.class, name = "RedNode")
@@ -42,6 +44,9 @@ public abstract class Node {
     public void setContent(String content) {
         this.content = content;
     }
+
+    @JsonIgnore
+    public abstract String getType();
 
     @Override
     public boolean equals(Object o) {
