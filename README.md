@@ -34,3 +34,4 @@ The issue has been posted as [stackoverflow question](https://stackoverflow.com/
   No detailed answers existing
 - [Dynamic polymorphic type handling with Jackson](https://www.dilipkumarg.com/dynamic-polymorphic-type-handling-jackson/):
   Proposal to use [`@JSonTypeResolver`](https://fasterxml.github.io/jackson-databind/javadoc/2.4/com/fasterxml/jackson/databind/annotation/JsonTypeResolver.html).
+- [Issue Deserialization: Use given concrete class if type property is missing (instead of `defaultImpl`)](https://github.com/FasterXML/jackson-databind/issues/955)
