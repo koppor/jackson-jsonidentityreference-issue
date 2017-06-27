@@ -10,13 +10,13 @@ public class GraphTest
 {
   private final String jsonStr = "{\n" +
     "  \"greenNodes\" : [ {\n" +
-    "    \"type\" : \"GreenNode\",\n" +
+//    "    \"type\" : \"GreenNode\",\n" +
     "    \"id\" : \"g\",\n" +
     "    \"content\" : \"green g\",\n" +
     "    \"greenProperty\" : \"green\"\n" +
     "  } ],\n" +
     "  \"redNodes\" : [ {\n" +
-    "    \"type\" : \"RedNode\",\n" +
+//    "    \"type\" : \"RedNode\",\n" +
     "    \"id\" : \"r\",\n" +
     "    \"content\" : \"red r\",\n" +
     "    \"redProperty\" : \"red\"\n" +
